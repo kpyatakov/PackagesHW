@@ -14,7 +14,7 @@ public class SqrServiceTest {
     public void testUnderFiveThousand(int expected, int x, int y) {
         SqrService service = new SqrService();
 
-        int actual = service.calcSqr(y) - service.calcSqr1(x);
+        int actual = service.calcSqr(x, y);
 
         Assertions.assertEquals(expected, actual);
     }
