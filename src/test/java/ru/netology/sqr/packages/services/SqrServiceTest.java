@@ -11,10 +11,10 @@ public class SqrServiceTest {
 
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/Numbers.csv")
-    public void testUnderFiveThousand(int expected, int x, int y) {
+    public void testMax(int expected, int FirBorder, int SecBorder) {
         SqrService service = new SqrService();
 
-        int actual = service.calcSqr(x, y);
+        int actual = service.calcSqr(FirBorder, SecBorder);
 
         Assertions.assertEquals(expected, actual);
     }
